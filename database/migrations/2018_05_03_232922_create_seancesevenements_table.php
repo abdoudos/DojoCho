@@ -15,6 +15,11 @@ class CreateSeancesevenementsTable extends Migration
     {
         Schema::create('seancesevenements', function (Blueprint $table) {
             $table->increments('id');
+            $table->date('date');
+            $table->time('heureDebut');
+            $table->time('heureFin');
+            $table->integer('durre');// la durre d'une seance en minute par ex:90mn
+            $table->string('informationAbout');
             $table->timestamps();
         });
     }
