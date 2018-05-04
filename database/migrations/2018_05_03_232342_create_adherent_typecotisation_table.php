@@ -15,7 +15,14 @@ class CreateAdherentTypecotisationTable extends Migration
     {
         Schema::create('adherent_typecotisation', function (Blueprint $table) {
             $table->increments('id');
+            $table->date('dateCotisation');
             $table->timestamps();
+            // lien vers la adherent
+            $table->integer('adherent_id')->unsigned();
+            $table->foreign('adherent_id')->references('id')->on('adherents');
+            //lien vers l'instructeur
+            $table->integer('typecotisation_id')->unsigned();
+            $table->foreign('typecotisation_id')->references('id')->on('typecotisations');
         });
     }
 
