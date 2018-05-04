@@ -15,6 +15,8 @@ class CreateTypecotisationsTable extends Migration
     {
         Schema::create('typecotisations', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nom');
+            $table->integr('mantant');
             $table->timestamps();
         });
     }
