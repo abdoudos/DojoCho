@@ -14,7 +14,7 @@ class CreateMembreSeanceevenementTable extends Migration
     public function up()
     {
         Schema::create('membre_seanceevenement', function (Blueprint $table) {
-          //  $table->increments('id');
+            $table->increments('id');
             $table->timestamps();
             // lien vers la members
             $table->integer('member_id')->unsigned();
@@ -22,7 +22,7 @@ class CreateMembreSeanceevenementTable extends Migration
             //lien vers seancesevenements
             $table->integer('seanceevenement_id')->unsigned();
             $table->foreign('seanceevenement_id')->references('id')->on('seancesevenements');
-            $table->primary(member_id,seanceevenement_id);
+            //$table->primary(member_id,seanceevenement_id);
         });
     }
 
