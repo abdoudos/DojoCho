@@ -15,6 +15,8 @@ class CreateAdherentsTable extends Migration
     {
         Schema::create('adherents', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('perssone_id')->unsigned();
+            $table->foreign('perssone_id')->references('id')->on('perssones');
             $table->timestamps();
         });
     }
