@@ -20,7 +20,7 @@ class CreatePerssonesTable extends Migration
             $table->date('dateNaissance');
             $table->string('lieuNaissance');
             $table->string('addresse');
-            $table->string(9,'numeroTelefone');
+            $table->string('numeroTelefone');
             $table->string('email')->unique;
             $table->date('dateInscreption');
             $table->timestamps();
