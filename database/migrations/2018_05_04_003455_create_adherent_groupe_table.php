@@ -14,8 +14,17 @@ class CreateAdherentGroupeTable extends Migration
     public function up()
     {
         Schema::create('adherent_groupe', function (Blueprint $table) {
+            //cel-ci represent une relation entre l'adherent et le groupe 
+            //et ca montre q'un adherent apartient a un groupe dans une date
             $table->increments('id');
+            $table->date('date');
             $table->timestamps();
+            //lien vers  adherents
+            $table->integer('adherent_id')->unsigned();
+            $table->foreign('adherent_id')->references('id')->on('adherents');
+            //lien vers groupes
+            $table->integer('groupe_id')->unsigned();
+            $table->foreign('groupe_id')->references('id')->on('groupes');
         });
     }
 

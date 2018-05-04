@@ -15,7 +15,14 @@ class CreateGroupesTable extends Migration
     {
         Schema::create('groupes', function (Blueprint $table) {
             $table->increments('id');
+            $table->string ('nom');
             $table->timestamps();
+            //lien vers la discipline
+            $table->integer('discipline_id')->unsigned();
+            $table->foreign('discipline_id')->references('id')->on('disciplines');
+            //lien versla categorie
+            $table->integer('categorie_id')->unsigned();
+            $table->foreign('categorie_id')->references('id')->on('categories');
         });
     }
 

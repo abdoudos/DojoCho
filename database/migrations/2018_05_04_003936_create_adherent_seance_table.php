@@ -16,6 +16,12 @@ class CreateAdherentSeanceTable extends Migration
         Schema::create('adherent_seance', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            //lien vers  adherents
+            $table->integer('adherent_id')->unsigned();
+            $table->foreign('adherent_id')->references('id')->on('adherents');
+            //lien vers groupes
+            $table->integer('groupe_id')->unsigned();
+            $table->foreign('groupe_id')->references('id')->on('groupes');
         });
     }
 

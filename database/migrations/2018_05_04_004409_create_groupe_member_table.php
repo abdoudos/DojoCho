@@ -14,8 +14,15 @@ class CreateGroupeMemberTable extends Migration
     public function up()
     {
         Schema::create('groupe_memeber', function (Blueprint $table) {
+            //cette relation montre quel membre est interessé a tel groupe 
             $table->increments('id');
             $table->timestamps();
+             //lien vers groupes
+             $table->integer('groupe_id')->unsigned();
+             $table->foreign('groupe_id')->references('id')->on('groupes');
+             // lien vers  members
+            $table->integer('member_id')->unsigned();
+            $table->foreign('member_id')->references('id')->on('members');
         });
     }
 
