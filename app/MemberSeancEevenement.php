@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class MembreSeancEevenement extends Model
+class MemberSeancEevenement extends Model
 {
-    //
+    public $table="membre_seanceevenement";
 }

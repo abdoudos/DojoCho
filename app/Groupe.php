@@ -14,4 +14,16 @@ class Groupe extends Model
     public function instructeurs(){
         return $this->belongsToMany('App\Instructeur');
     }
+    public function members(){
+        return $this->belongsToMany('App\Member');
+    }
+    public function discipline(){
+        return $this->belongsTo('App\Discipline');
+    }
+    public function categorie(){
+        return $this->belongsTo('App\Categorie');
+    }
+    public function seances(){
+        return $this->hasMany('App\Seance');
+    }
 }

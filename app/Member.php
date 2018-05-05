@@ -13,4 +13,13 @@ class Member extends Model
     public function instructeur(){
         return $this->hasOne('App\Instructeur');
     }
+    public function groupes(){
+        return $this->belongsToMany('App\Groupe');
+    }
+    public function seancesevenements(){
+        return $this->belongsToMany('App\SeanceEvenement');
+    }
+    public function seance(){
+        return $this->belongsToMany('App\Seance');
+    }
 }

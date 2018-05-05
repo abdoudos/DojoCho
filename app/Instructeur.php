@@ -15,4 +15,7 @@ class Instructeur extends Model
     public function disciplines(){
         return $this->belongsToMany('App\Discipline');
     }
+    public function user(){
+        return $this->belongsTo('App\Users');
+    }
 }
