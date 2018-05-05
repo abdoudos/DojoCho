@@ -20,4 +20,7 @@ class Adherent extends Model
     public function perssone(){
         return $this->belongsTo('App\Perssone');
     }
+    public function seances(){
+        return $this->belongsToMany('App\Seance');
+    }
 }
