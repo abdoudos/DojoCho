@@ -15,9 +15,12 @@ class CreateAdherentsTable extends Migration
     {
         Schema::create('adherents', function (Blueprint $table) {
             $table->increments('id');
-            //lien vers adherent
+            //lien vers perssone
             $table->integer('perssone_id')->unsigned();
             $table->foreign('perssone_id')->references('id')->on('perssones');
+             //lien vers members
+             $table->integer('member_id')->unsigned();
+             $table->foreign('member_id')->references('id')->on('members');
             $table->timestamps();
         });
     }
