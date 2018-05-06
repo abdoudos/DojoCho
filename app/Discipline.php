@@ -11,4 +11,8 @@ class Discipline extends Model
     public function instructeurs(){
         return $this->belongsToMany('App\Instructeur');
     }
+    
+   public function groupes( ){
+       return $this->hasMany('App\Groupe');
+   }
 }
