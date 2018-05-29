@@ -1,13 +1,6 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>suivie </title>
-<link rel="stylesheet" href="style.css">
 
-</head>
-<body>
- <header>
-
+<header>
+<php echo "Ceci est du texte"; ?>
   <table >
   <th>
    <td>
@@ -41,7 +34,7 @@
 <td>
   <div id="log">
 
-    <p><a href="accueil.html">log-out</a></p>
+    <p><a href="login.html">log-in</a></p>
 
   </div>
 </td>
@@ -58,9 +51,13 @@
 <input type="search" id="mySearch" placeholder="Search for something..">
 <p id="demo"></p>
 
+<script>
+function myFunction() {
+    var x = document.getElementById("mySearch").placeholder;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
 </td>
 </th>
 </table>
 </header>
-</body>
-</html>

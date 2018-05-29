@@ -70,71 +70,76 @@ button {
 <br><br><br><br><br><br><br>
 
 
-<form action="/ma-page-de-traitement" method="post">
+
+       <form method="post" action="recu.php">
     <div>
         <label for="nom">Nom :</label>
-        <input id="nom" name="user_name" type="text">
+        <input name="nom" type="text">
     </div>
 
     <div>
           <label for="prenom">PreNom :</label>
-          <input id="prenom" name="user_prenom" type="text">
+          <input name="user_prenom" type="text">
+      </div>
+	  
+     <div>
+          <label for="SurNom">SurNom :</label>
+          <input name="SurNom" type="text">
       </div>
 
-    <div>
-          <label for="date">Date de naissance :</label>
-          <input id="date" name="user_date" onchange="alert(" hhh")"="" type="date">
-      </div>
-
-      <div>
+        <div>
             <label for="code">mot de pass :</label>
-            <input id="code" name="user_code" onblur="" type="password">
+            <input name="code" onblur="" type="password">
         </div>
+
+         <div>
+            <label for="address">address :</label>
+            <input name="adresse" type="text">
+        </div>
+		
+	   <div>
+          <label for="Numero_Tel">Numero_Tel :</label>
+          <input name="Numero_Tel" type="text">
+      </div>
+
+            <div>
+        <label for="courriel">Courriel :</label>
+        <input name="courriel" on="" error="" type="email">
+    </div>
+	
+	  <div>
+          <label for="date_naiss">Date de naissance :</label>
+          <input name="date_naiss" type="date">
+      </div>
+
+       <div>
+          <label for="Lieu_naiss">Lieu de naissance :</label>
+          <input name="Lieu_naiss" type="text">
+      </div>
+	  
 
         <p id="demo"></p>
 
-        <script>
-        function myFunction(a) {
-            return fff ;
-        }
-        document.getElementById("demo").innerHTML = myFunction(user_code);
-        </script>
-
-          <script>
-function ddd()
-{
-
-  return
-}
-
-          </script>
 
 
-      <div method="post" action="ton_action"><p>
 
+	   <div
             <label for="sexe">Sexe :</label><select name="sexe" id="sexe">
-      Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;<option value="ton-sexe" selected="selected">Homme</option>
-      Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;<option value="ton-sexe">Femme</option>Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;
+      Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;<option value="homme" selected="selected">Homme</option>
+      Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;<option value="femme">Femme</option>Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;Â&nbsp;
       </select></p>
       </div>
     
 
-      <div>
-            <label for="address">address :</label>
-            <input id="address" name="user_adresse" type="text">
-        </div>
-    <div>
-        <label for="courriel">Courriel :</label>
-        <input id="courriel" name="user_email" on="" error="" type="email">
-    </div>
+
+
     <div>
         <label for="message">Message :</label>
         <textarea id="message" name="user_message"></textarea>
     </div>
 
-    <div class="button">
-        <button type="submit"><a href="reponse.html"> Envoyer votre message  </a>  </button>
-    </div>
+    <br>
+      <input type="submit" value="Submit">
 
 
 </form>
