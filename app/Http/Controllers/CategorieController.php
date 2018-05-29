@@ -21,7 +21,7 @@ class CategorieController extends Controller
     }
     public function addCategorie(Request $request){
 
-        if($request->isMethod('psot')){
+        if($request->isMethod('POST')){
             echo $request;
             $newcategorie =new Categorie();
             $newcategorie->nom=$request->input('nom');

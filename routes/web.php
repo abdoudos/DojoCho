@@ -14,12 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('add',"CategorieController@addCategorie");
-Route::post('add',"CategorieController@addCategorie");
+
+Route::get('discipline/add',"DisciplineController@addDiscipline");
+Route::post('discipline/add',"DisciplineController@addDiscipline");
+
+Route::get('categorie/add',"CategorieController@addCategorie");
+Route::post('categorie/add',"CategorieController@addCategorie");
 
 Route::get('/categorie',"CategorieController@viewCategorie");
 Route::get('/categorie/{id}',"CategorieController@viewCategorie");
 
+Route::get('/discipline',"DisciplineController@viewDiscipline");
 
 Auth::routes();
 

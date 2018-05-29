@@ -4,15 +4,16 @@
         <td >name</td>
     </tr>
 </table>
-@foreach ($categorie as $mycategorie) 
+
+@foreach ($discipline as $mydiscipline) 
 <table border="solid" style="animation: 2ms">
   
     <tr>
         <td>
-                {{$mycategorie->id}}
+                {{$mydiscipline->id}}
         </td>
         <td>
-                {{$mycategorie->nom}}
+                {{$mydiscipline->nom}}
         </td>
     </tr>
 </table>
