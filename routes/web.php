@@ -14,6 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('add',"CategorieController@addCategorie");
+Route::post('add',"CategorieController@addCategorie");
+
+Route::get('/categorie',"CategorieController@viewCategorie");
+Route::get('/categorie/{id}',"CategorieController@viewCategorie");
+
 
 Auth::routes();
 
