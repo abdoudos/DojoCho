@@ -1,13 +1,11 @@
 <table border="solid">
-    <tr>
-        <td >id</td>
-        <td >name</td>
-    </tr>
-</table>
-
+    <thead>
+            <tr>
+                    <td >id</td>
+                    <td >name</td>
+                </tr>
+    </thead>
 @foreach ($discipline as $mydiscipline) 
-<table border="solid" style="animation: 2ms">
-  
     <tr>
         <td>
                 {{$mydiscipline->id}}
@@ -16,9 +14,19 @@
                 {{$mydiscipline->nom}}
         </td>
     </tr>
+@endforeach
+<tfoot>
+        <tr>
+            <td><input type="number" name="id"></td>
+            <td><input type="text" name="nom" placeholder="nom"></td>
+            <td><input type="submit" name="ajouter" value="Ajouter"></td>
+        </tr>
+    </tfoot>
 </table>
+
+
    
     
-@endforeach
+
 
 

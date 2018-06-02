@@ -9,7 +9,7 @@ class DisciplineController extends Controller
 {
     //
     public function viewDiscipline(){
-       // $discipline=Discipline::all();
+        $discipline=Discipline::all();
         $arr=Array('discipline'=>$discipline);
         return view('discipline.view',$arr);
     }
