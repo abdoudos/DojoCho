@@ -16,8 +16,9 @@ Route::get('/', function () {
 });
 Route::get('/groupe',"GroupeController@viewGroupe");
 
-Route::get('discipline/add',"DisciplineController@addDiscipline");
-Route::post('discipline/add',"DisciplineController@addDiscipline");
+Route::get('discipline',"DisciplineController@viewDiscipline");
+Route::post('discipline',"DisciplineController@viewDiscipline");
+
 
 Route::get('categorie/add',"CategorieController@addCategorie");
 Route::post('categorie/add',"CategorieController@addCategorie");
@@ -25,7 +26,7 @@ Route::post('categorie/add',"CategorieController@addCategorie");
 Route::get('/categorie',"CategorieController@viewCategorie");
 Route::get('/categorie/{id}',"CategorieController@viewCategorie");
 
-Route::get('/discipline',"DisciplineController@viewDiscipline");
+
 
 Auth::routes();
 
