@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/groupe',"GroupeController@viewGroupe");
+Route::post('/groupe',"GroupeController@addGroupe");
 
 Route::get('discipline',"DisciplineController@viewDiscipline");
 Route::post('discipline',"DisciplineController@viewDiscipline");
