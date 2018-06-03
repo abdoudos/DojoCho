@@ -27,13 +27,13 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <form action="groupe" method="POST">
+                        <form action="/groupe" method="POST">
                                 {{csrf_field()}}
                                 <td><input type="number" name="id" min="1" step="1"></td>
                                 <td><input type="text" name="nomGroupe" placeholder="Entrer le nom "> </td>
                                 <td>
                                     <form >
-                                        <select name="selectCategorie" id="">
+                                        <select name="" id="selectCategorie">
                                             @foreach ($categorie as $mycategorie)
                                                 <option value=""> {{$mycategorie->nom}}</option>
                                             @endforeach
@@ -41,8 +41,8 @@
                                     </form>
                                 </td>
                                 <td>
-                                        <form action="" method="get" name="formDiscipline">
-                                            <select name="selectDiscipline" id="">
+                                        <form >
+                                            <select name="" id="selectDiscipline">
                                                 @foreach ($discipline as $mydiscipline)
                                                     <option value=""> {{$mydiscipline->nom}}</option>
                                                 @endforeach 
@@ -50,6 +50,13 @@
                                         </form>
                                     </td>
                                 <td><input type="submit" name="ajouter" value="Ajouter"></td>
+                               <script>
+                                    function myFunction() {
+                                        var selectDiscipline= document.getElementById("selectDiscipline").value;
+                                        var selectCategorie= document.getElementById("selectCategorie").value;
+
+                                    }
+                                </script>                     
                         </form>
                     </tr>
                 </tfoot>

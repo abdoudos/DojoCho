@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Seance extends Model
 {
-    public $table="seanes";
+    public $table="seances";
 
     public function adherents(){
         return $this->belongsToMany('App\Adherent');

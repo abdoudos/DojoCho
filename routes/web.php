@@ -14,8 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('seance',"SeanceController@addSeance");
+Route::post('seance',"SeanceController@addSeance");
+
 Route::get('/groupe',"GroupeController@viewGroupe");
-Route::post('/groupe',"GroupeController@addGroupe");
+Route::post('/groupe',"GroupeController@viewGroupe");
 
 Route::get('discipline',"DisciplineController@viewDiscipline");
 Route::post('discipline',"DisciplineController@viewDiscipline");

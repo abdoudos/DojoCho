@@ -15,9 +15,11 @@ class GroupeController extends Controller
             $newgroupe =new Groupe();
             $newgroupe->nom=$request->input('nomGroupe');
             $newgroupe->id=$request->input('id');
-            
-            $newgroupe->discipline_id=Discipline::where('nom', $request->selec('selectDiscipline').val)->first()->id;
-            $newgroupe->categorie_id=Categorie::where('nom',$request->selec('selectCategorie').val)->first()->id;
+           
+            $newgroupe->discipline_id=2;
+            $newgroupe->categorie_id=3;
+            //$newgroupe->discipline_id=Discipline::where('nom', $request->selec('selectDiscipline').val)->first()->id;
+            //$newgroupe->categorie_id=Categorie::where('nom',$request->selec('selectCategorie').val)->first()->id;
             $newgroupe->save();
         }
         $groupe=Groupe::all();
